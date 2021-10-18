@@ -1,0 +1,11 @@
+.hero-area-wrapper {
+  background-image: url("../../../../images/slider-hero-bg.jpg");
+}
+
+/* Mobile Layout: 320px. */
+@media only screen and (max-width: 767px) {
+  .hero-description {
+    text-align: center !important;
+    margin-top: 220px;
+  }
+}
