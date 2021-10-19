@@ -1,0 +1,10 @@
+.cemail {
+  text-align: center;
+}
+.grid.sm\:grid-cols-1.gap-4.cemail {
+  margin: 0 auto;
+  width: 401px;
+}
+.container.mx-auto.cemail2 {
+  background: lightblue;
+}
