@@ -5,14 +5,14 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <>
-      <div className="hero-area-wrapper h-screen bg-center bg-cover flex items-center p-5">
+      <div className="hero-area-wrapper sm:h-screen bg-center bg-cover flex items-center p-5">
         <div className="container mx-auto">
-          <div className="grid sm:grid-cols-2 gap-4">
+          <div className="grid lg:grid-cols-2 gap-4">
             <div className="hero-description  text-left">
               <span className="bg-red-600 text-white p-1 rounded text-sm">
                 COVID -19 TEST
               </span>
-              <h1 className="text-5xl p-10 pl-0">
+              <h1 className="sm:text-5xl text-4xl p-10 sm:pl-0">
                 Test your covid-19 symptom with care
               </h1>
               <p className="pb-5">

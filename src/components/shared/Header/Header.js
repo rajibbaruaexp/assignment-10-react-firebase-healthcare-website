@@ -104,7 +104,7 @@ const Header = () => {
                     </NavLink>
 
                     <NavLink
-                      to="/services"
+                      to="/all-services"
                       className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-regular"
                       activeClassName="bg-gray-900"
                     >
@@ -167,7 +167,7 @@ const Header = () => {
             </NavLink>
 
             <NavLink
-              to="/services"
+              to="/all-services"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-regular"
               activeClassName="bg-gray-900"
               onClick={toggle}

@@ -1,8 +1,56 @@
 [
   {
-    "ID": "1",
+    "id": "1",
     "name": "Blood Test",
-    "price": 68.36,
-    "shipping": 7.99
+    "img": "https://i.ibb.co/HB1PVNG/1.png",
+    "price": 600,
+    "time": "10am to 9pm",
+    "pathologist": "Rajib Barua",
+    "description": "A blood test usually involves taking a blood sample from a blood vessel in your arm. The arm is a convenient part of the body to use because it can be easily uncovered.The usual place for a sample to be taken from is the inside of the elbow or wrist, where the veins are relatively close to the surface. Blood samples from children are often taken from the back of the hand. Their skin may be numbed with a special spray or cream before the sample is taken."
+  },
+  {
+    "id": "2",
+    "name": "Clinical Urine Test",
+    "img": "https://i.ibb.co/b24bpp7/2.png",
+    "price": 1200,
+    "time": "10am to 9pm",
+    "pathologist": "Mr. Debdhor Dey",
+    "description": "Your doctor may want to test your urine if you’re getting ready to have surgery or are about to be admitted to the hospital. Urinalysis can be part of a pregnancy checkup, too.If you have symptoms of a kidney or urinary tract problem, you may have the tests to help find out what the problem is. You might also have this test regularly if you have a condition such as a kidney disease that needs to be watched over time."
+  },
+  {
+    "id": "3",
+    "name": "Dope Test",
+    "img": "https://i.ibb.co/NKLPrS2/3.png",
+    "price": 1600,
+    "time": "10am to 9pm",
+    "pathologist": "Rahman Ullah",
+    "description": "A drug test is a technical analysis of a biological specimen, for example urine, hair, blood, breath, sweat, and/or oral fluid/saliva—to determine the presence or absence of specified parent drugs or their metabolites. Major applications of drug testing include detection of the presence of performance enhancing steroids in sport, employers and parole/probation officers screening for drugs prohibited by law (such as cocaine, methamphetamine, and heroin) and police officers testing for the presence and concentration of alcohol (ethanol) in the blood commonly referred to as BAC (blood alcohol content). BAC tests are typically administered via a breathalyzer while urinalysis is used for the vast majority of drug testing in sports and the workplace. Numerous other methods with varying degrees of accuracy, sensitivity (detection threshold/cutoff), and detection periods exist."
+  },
+  {
+    "id": "4",
+    "name": "Magnetic Resonance Imaging Test",
+    "img": "https://i.ibb.co/z2P1skv/4.png",
+    "price": 13000,
+    "time": "10am to 9pm",
+    "pathologist": "Md. Jakir Hossain",
+    "description": "Magnetic resonance imaging (MRI) is a medical imaging technique used in radiology to form pictures of the anatomy and the physiological processes of the body. MRI scanners use strong magnetic fields, magnetic field gradients, and radio waves to generate images of the organs in the body. MRI does not involve X-rays or the use of ionizing radiation, which distinguishes it from CT and PET scans. MRI is a medical application of nuclear magnetic resonance (NMR) which can also be used for imaging in other NMR applications, such as NMR spectroscopy.    MRI is widely used in hospitals and clinics for medical diagnosis, staging and follow-up of disease. Compared to CT, MRI provides better contrast in images of soft-tissues, e.g. in the brain or abdomen. However, it may be perceived as less comfortable by patients, due to the usually longer and louder measurements with the subject in a long, confining tube. Additionally, implants and other non-removable metal in the body can pose a risk and may exclude some patients from undergoing an MRI examination safely."
+  },
+  {
+    "id": "5",
+    "name": "X-ray",
+    "img": "https://i.ibb.co/YZZ9YHB/5.png",
+    "price": 1400,
+    "time": "10am to 9pm",
+    "pathologist": "Rajib Barua",
+    "description": "An X-ray, or, much less commonly, X-radiation, is a penetrating form of high-energy electromagnetic radiation. Most X-rays have a wavelength ranging from 10 picometers to 10 nanometers, corresponding to frequencies in the range 30 petahertz to 30 exahertz and energies in the range 124 eV to 124"
+  },
+  {
+    "id": "6",
+    "name": "Colorectal Cancer Screening Tests",
+    "img": "https://i.ibb.co/2gXwsTj/5.png",
+    "price": 1700,
+    "time": "10am to 9pm",
+    "pathologist": "Ariful Islam",
+    "description": "If your doctor has recommended colon cancer screening, you might be able to choose from various colon cancer screening tests.    If you're reluctant to make a decision, remember that any discomfort or embarrassment from colon cancer screening is temporary — and detecting problems early could save your life. Screening tests are used only if you don't have bowel symptoms. If you have signs and symptoms — such as abdominal pain, a change in bowel habits, bleeding, constipation or diarrhea — then you'll need other tests to address these problems.     If you don't have bowel symptoms, consider the following questions to help choose the colon cancer screening test that's best for you."
   }
 ]
