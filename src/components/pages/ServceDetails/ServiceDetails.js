@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ServiceDetails = () => {
   let { id } = useParams();
@@ -111,9 +111,11 @@ const ServiceDetails = () => {
         </section>
       </div>
       <div className="title mt-14">
-        <button className="bg-blue-500 text-white p-4 rounded hover:bg-blue-800">
-          Contact Us
-        </button>
+        <Link to="/contact-us">
+          <button className="bg-blue-500 text-white p-4 rounded hover:bg-blue-800">
+            Contact Us
+          </button>
+        </Link>
       </div>
     </div>
   );

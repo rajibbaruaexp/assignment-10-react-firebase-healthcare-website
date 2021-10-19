@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CovidKit from "../../../../images/covid-test-kit.png";
 import "./Hero.css";
 
@@ -21,9 +22,11 @@ const Hero = () => {
                 will experience mild to moderate symptoms and recover without
                 special treatment
               </p>
-              <button className="hover:bg-red-600 transition-all bg-blue-500 text-white	p-5 rounded pt-3 pb-3 mt-5 ">
-                Find Out More
-              </button>
+              <Link to="/all-services">
+                <button className="hover:bg-red-600 transition-all bg-blue-500 text-white	p-5 rounded pt-3 pb-3 mt-5 ">
+                  Find Out More
+                </button>
+              </Link>
             </div>
             <div className="covid-test-kit">
               <img src={CovidKit} alt="" />
