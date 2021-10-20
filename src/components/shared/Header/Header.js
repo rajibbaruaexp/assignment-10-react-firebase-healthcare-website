@@ -138,9 +138,7 @@ const Header = () => {
                         <span className="sr-only">Open user menu</span>
                         <p>
                           <span className="font-light">
-                            {!user?.displayName
-                              ? user?.email
-                              : user?.displayName}
+                            {user?.displayName}
                           </span>
                           <span className="font-bold">(Log Out)</span>
                         </p>

@@ -7,9 +7,8 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
 
-  const [user, setUser] = useState({});
-  const [isloading, setIsloading] = useState(true);
-  const { signInUsingGoogle, loginWithEmail } = useAuth();
+  const { signInUsingGoogle, loginWithEmail, setIsloading, setUser } =
+    useAuth();
   const history = useHistory();
   const location = useLocation();
   const redirect_uri = location.state?.from || "/home";
@@ -19,6 +18,9 @@ const Register = () => {
       .then((result) => {
         history.push(redirect_uri);
         setUser(result.user);
+      })
+      .catch((error) => {
+        setError(error.message);
       })
       .finally(() => setIsloading(false));
   };
@@ -36,15 +38,15 @@ const Register = () => {
       .then((result) => {
         history.push(redirect_uri);
         setUser(result.user);
+        console.log(result.user);
       })
       .catch((error) => {
-        setError(error);
+        const errorMessage = error.message;
+        setError(errorMessage);
       })
       .finally(() => setIsloading(false));
   };
-  if (error) {
-    alert(error);
-  }
+
   return (
     <div className="bg-white sm:bg-gray-200 min-h-screen  flex flex-col justify-center items-center">
       <div className="bg-white shadow-none sm:shadow-lg px-8 sm:px-12 w-full xs:w-full sm:w-8/12 md:w-7/12 lg:w-7/12 xl:w-2/6 h-screen sm:h-auto py-8">
@@ -160,6 +162,13 @@ const Register = () => {
                 <span className="text-blue-800">Create an account</span>
               </Link>
             </div>
+            {error ? (
+              <div className="w-full flex flex-row justify-center">
+                <span className="text-white bg-red-600 p-4 ">{error}</span>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </form>
       </div>

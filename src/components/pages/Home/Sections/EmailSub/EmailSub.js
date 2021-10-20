@@ -3,7 +3,7 @@ import "./email.css";
 
 const EmailSub = () => {
   return (
-    <div>
+    <div className="bg-blue-200 pt-10 pb-10">
       <div className="container mx-auto cemail2">
         <div className="grid sm:grid-cols-1 gap-4 cemail">
           <form class="m-4 flex">

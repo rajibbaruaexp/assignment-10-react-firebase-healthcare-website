@@ -9,8 +9,8 @@ const Home = () => {
     <>
       <Hero></Hero>
       <Services></Services>
-      <Team></Team>
       <EmailSub></EmailSub>
+      <Team></Team>
     </>
   );
 };

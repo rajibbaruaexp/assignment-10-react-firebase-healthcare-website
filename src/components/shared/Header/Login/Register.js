@@ -5,10 +5,17 @@ const Register = () => {
   // login registration state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
-  const [user, setUser] = useState({});
-  const [isloading, setIsloading] = useState(true);
-  const { signInUsingGoogle, registrationWithEmail } = useAuth();
+  const [error, setError] = useState("");
+  const {
+    signInUsingGoogle,
+    registrationWithEmail,
+    updateProfile,
+    auth,
+    setIsloading,
+    setUser,
+  } = useAuth();
   const history = useHistory();
   const location = useLocation();
   const redirect_uri = location.state?.from || "/home";
@@ -19,13 +26,22 @@ const Register = () => {
         history.push(redirect_uri);
         setUser(result.user);
       })
+      .catch((error) => {
+        setError(error.message);
+      })
       .finally(() => setIsloading(false));
   };
-
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
   };
-
+  const setUserDisplayName = () => {
+    updateProfile(auth.currentUser, {
+      displayName: name,
+    }).then((result) => {});
+  };
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
   };
@@ -34,7 +50,12 @@ const Register = () => {
     registrationWithEmail(email, password)
       .then((result) => {
         history.push(redirect_uri);
+        setUserDisplayName();
         setUser(result.user);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        setError(errorMessage);
       })
       .finally(() => setIsloading(false));
   };
@@ -51,6 +72,29 @@ const Register = () => {
         ></div>
         <form onSubmit={handleRegistration}>
           <div className="flex flex-col gap-4 px-0 py-4">
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="font-medium text-2xl text-gray-600 absolute p-2.5 px-3 w-11"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+                />
+              </svg>
+              <input
+                className="py-2 pl-10 border border-gray-200 w-full"
+                placeholder="Your Name"
+                type="text"
+                onBlur={handleNameChange}
+                required
+              />
+            </div>
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -177,6 +221,13 @@ const Register = () => {
                 <span className="text-blue-800">Login here</span>
               </Link>
             </div>
+            {error ? (
+              <div className="w-full flex flex-row justify-center">
+                <span className="text-white bg-red-600 p-4 ">{error}</span>
+              </div>
+            ) : (
+              ""
+            )}
           </div>
         </form>
       </div>
