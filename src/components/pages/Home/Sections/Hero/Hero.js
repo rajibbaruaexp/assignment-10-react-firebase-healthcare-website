@@ -6,7 +6,7 @@ import "./Hero.css";
 const Hero = () => {
   return (
     <>
-      <div className="hero-area-wrapper sm:h-screen bg-center bg-cover flex items-center p-5">
+      <div className="hero-area-wrapper  bg-center bg-cover flex items-center pt-24">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-4">
             <div className="hero-description  text-left">
